@@ -7,13 +7,13 @@ const BlogSchema = new Schema({
   _id: { type: Schema.Types.String, required: true, default: uuidv4 },
   blogName: { type: Schema.Types.String, required: true },
   blogType: { type: Schema.Types.String, required: true },
-  blogDescription: { type: Schema.Types.String, required: false },
+  description: { type: Schema.Types.String, required: false },
   ...defaultFields
 }, {
   ...defaultSchemaOptions
 })
 
-const BlogStore = mongoose.model('blog', BlogSchema, 'Blog_List')
+const BlogStore = mongoose.model('blog', BlogSchema, 'Blog-List')
 
 module.exports = BlogStore
 

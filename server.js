@@ -23,7 +23,7 @@ const initialize = async () => {
   // Public Routes! i.e. Login, SignUp etc.
   app.use('/', publicRoutes)
 
-  app.use(authentication)
+  // app.use(authentication)
 
   // Private Routes! i.e. System routes etc.
   app.use('/', privateRoutes)
