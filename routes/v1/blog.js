@@ -1,6 +1,6 @@
 const router = require('express').Router()
 
-const { getBlogs, getBlogsByLimit, addBlog, editBlog, deleteBlog, filterBlog, filterBlogByType, getLatestBlogs, getLatestBlogsByLimit } = require('../../controllers/blog')
+const { getBlogs, getBlogsByLimit, getBlogById, addBlog, editBlog, deleteBlog, filterBlog, filterBlogByCategory, getLatestBlogs, getLatestBlogsByLimit } = require('../../controllers/blog')
 
 // Dummies routes - /v1/dummies
 
@@ -9,6 +9,9 @@ router.get('/limit', getBlogsByLimit)
 
 // Create blog
 router.post('/', addBlog)
+
+// Get blog by ID
+// router.get('/:slug', getBlogById)
 
 // Edit blog
 router.put('/:id', editBlog)
@@ -19,8 +22,8 @@ router.delete('/:id', deleteBlog)
 // Filter blogs by title/description
 router.post('/filter', filterBlog)
 
-// Filter blogs by blog type
-router.post('/filter-type', filterBlogByType)
+// Filter blogs by blog category
+router.post('/filter-category', filterBlogByCategory)
 
 // Get latest blogs
 router.get('/latest', getLatestBlogs)
