@@ -1,5 +1,6 @@
 const dotenv = require("dotenv");
 dotenv.config();
+
 const constants = require("./global/index");
 const cors = require("cors");
 const express = require("express");
