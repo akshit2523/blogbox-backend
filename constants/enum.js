@@ -1,7 +1,7 @@
 export const BLOG_STATUS = {
-  DRAFT: "Draft",
-  PUBLISHED: "Published",
-  ARCHIVED: "Archived",
+  DRAFT: "draft",
+  PUBLISHED: "published",
+  ARCHIVED: "archived",
 };
 
 export const BLOG_STATUS_VALUES = Object.values(BLOG_STATUS);

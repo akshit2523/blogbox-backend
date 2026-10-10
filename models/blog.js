@@ -29,7 +29,8 @@ const BlogSchema = new Schema(
 
     author: {
       type: Schema.Types.String,
-      required: true,
+      required: false,
+      default: 'Akshit Dhameliya'
     },
 
     readTime: {
